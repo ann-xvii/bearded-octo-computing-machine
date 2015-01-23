@@ -4,7 +4,13 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   resources :products
-  root 'products#index'
+  # root 'products#index'
+
+  resources :linkedin
+  get '/linkedin_profile' => "linkedin#linkedin_profile"
+  get '/oauth_account' => "linkedin#oauth_account"
+  get '/linkedin_oauth_url' => 'linkedin#generate_linkedin_oauth_url'
+  root 'linkedin#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
