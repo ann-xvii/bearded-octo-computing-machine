@@ -12,7 +12,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'devise'
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-linkedin'
-
+gem 'linkedin'
 
 # CARRIERWAVE
 gem 'carrierwave'
